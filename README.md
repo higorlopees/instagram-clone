@@ -1,5 +1,5 @@
 # instagram-clone
-RESTful API and Instagram Clone WEB repository used in a NodeJS course
+Repository of RESTful API from an Instagram clone web application used in a NodeJS course
 
 ## Configuring the environment
 First instal [nodejs](https://nodejs.org/). Then install [MongoDB](https://www.mongodb.com/).
