@@ -14,4 +14,12 @@ module.exports = function(application){
     application.get('/api/:id', function(req, res){
         application.app.controllers.apiController.getApiById(application, req, res);
     });
+
+    application.put('/api/:id', function(req, res){
+        application.app.controllers.apiController.putApiById(application, req, res);
+    });
+
+    application.delete('/api/:id', function(req, res){
+        application.app.controllers.apiController.deleteApiById(application, req, res);
+    });
 };
