@@ -1,5 +1,5 @@
 {
-  "name": "server_instagram_clone",
+  "name": "instagram-clone-api",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "connect-multiparty": "^2.2.0",
     "consign": "^0.1.6",
     "express": "^4.17.1",
     "mongodb": "^3.4.1"

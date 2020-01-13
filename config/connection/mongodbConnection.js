@@ -20,7 +20,7 @@ function query(db, options){
             collection.find(options.where).toArray(options.callback);
             break;
         case "update":
-            collection.updateOne(options.where, options.update, options.callback);
+            collection.updateMany(options.where, options.update, options.callback);
             break;
         case "delete":
             collection.deleteOne(options.where, options.callback);

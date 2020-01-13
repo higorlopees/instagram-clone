@@ -41,7 +41,14 @@ InstagramModel.prototype.updatePutApiById = function(data, callback){
     const options = {
         operation: 'update',
         where: { _id: objectId(data.id) },
-        update: { $set: data.update },
+        update: { 
+            $push: {
+                comments: {
+                    comment_id: new objectId(),
+                    comment: data.update.comment
+                } 
+            } 
+        },
         collection: 'posts',
         callback: callback
     };
@@ -51,8 +58,15 @@ InstagramModel.prototype.updatePutApiById = function(data, callback){
 
 InstagramModel.prototype.deleteDeleteApiById = function(data, callback){
     const options = {
-        operation: 'delete',
-        where: { _id: objectId(data) },
+        operation: 'update',
+        where: {},
+        update: {
+            $pull: {
+                comments: {
+                    comment_id: objectId(data)
+                }
+            }
+        },
         collection: 'posts',
         callback: callback
     };

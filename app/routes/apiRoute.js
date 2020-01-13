@@ -22,4 +22,8 @@ module.exports = function(application){
     application.delete('/api/:id', function(req, res){
         application.app.controllers.apiController.deleteApiById(application, req, res);
     });
+
+    application.get('/images/:image', function(req, res){
+        application.app.controllers.apiController.getImage(application, req, res);
+    });
 };
