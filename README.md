@@ -1,4 +1,4 @@
-# instagram-clone
+# instagram-clone-api
 Repository of RESTful API from an Instagram clone web application used in a NodeJS course
 
 ## Configuring the environment
