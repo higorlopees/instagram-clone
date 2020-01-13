@@ -17,7 +17,7 @@ function query(db, options){
             collection.insertOne(options.insert, options.callback);
             break;
         case "find":
-            collection.find(options.where).toArray(options.callback);
+            collection.find(options.where).sort({ _id: -1 }).toArray(options.callback);
             break;
         case "update":
             collection.updateMany(options.where, options.update, options.callback);
