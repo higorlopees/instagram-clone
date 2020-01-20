@@ -1,8 +1,11 @@
 const MongoClient  = require('mongodb').MongoClient;
 const assert = require("assert");
+require('dotenv').config();
+
+const uri = process.env.PROD_MONGODB
 
 const connMongoDb = function(options){
-    MongoClient.connect('mongodb://localhost:27017', { useUnifiedTopology: true }, function(err, client){
+    MongoClient.connect(uri, { useUnifiedTopology: true }, function(err, client){
         assert.equal(null, err);
         const db = client.db("instagram");
         query(db, options);
