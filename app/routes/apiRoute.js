@@ -8,6 +8,7 @@ module.exports = function(application){
     });
 
     application.get('/api', function(req, res){
+        console.log(application.app);
         application.app.controllers.apiController.getApi(application, req, res);
     });
 
